@@ -1,0 +1,10 @@
+{
+  "unit": "ns",
+  "host": {
+    "softmax": 15000,
+    "rmsnorm": 70069,
+    "addertree": 4375,
+    "gelu": 14000,
+    "router": 16116
+  }
+}

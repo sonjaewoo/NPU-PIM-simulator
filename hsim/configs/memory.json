@@ -1,0 +1,23 @@
+{
+  "request_size_bytes" : 64,
+  "dram" : {
+    "enabled"        : true,
+    "backend"        : "dramsim3",
+    "type"           : "LPDDR5",
+    "chip_config"    : "8Gb_x16",
+    "timing_preset"  : "6400",
+    "channels"       : 1,
+    "capacity_gb"    : 16,
+    "clock_freq_ghz" : 3.2
+  },
+  "pim" : {
+    "enabled"        : true,
+    "backend"        : "dramsim3",
+    "type"           : "LPDDR5",
+    "chip_config"    : "8Gb_x16",
+    "timing_preset"  : "6400",
+    "channels"       : 1,
+    "capacity_gb"    : 16,
+    "clock_freq_ghz" : 3.2
+  }
+}
