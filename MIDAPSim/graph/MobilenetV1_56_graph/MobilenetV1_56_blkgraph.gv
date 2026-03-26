@@ -1,0 +1,67 @@
+digraph MobilenetV1_56_blkgraph {
+	input -> Conv1 [label=input style=dashed]
+	subgraph "cluster_Block(input)" {
+		label=0 labeljust=l
+		input
+	}
+	Conv1 -> DWConv1 [label=Conv1]
+	DWConv1 -> Conv2 [label=DWConv1]
+	Conv2 -> DWConv2 [label=Conv2]
+	DWConv2 -> Conv3 [label=DWConv2]
+	Conv3 -> DWConv3 [label=Conv3]
+	DWConv3 -> Conv4 [label=DWConv3]
+	Conv4 -> DWConv4 [label=Conv4]
+	DWConv4 -> Conv5 [label=DWConv4]
+	Conv5 -> DWConv5 [label=Conv5]
+	DWConv5 -> Conv6 [label=DWConv5]
+	Conv6 -> DWConv6 [label=Conv6]
+	DWConv6 -> Conv7 [label=DWConv6]
+	Conv7 -> DWConv7 [label=Conv7]
+	DWConv7 -> Conv8 [label=DWConv7]
+	Conv8 -> DWConv8 [label=Conv8]
+	DWConv8 -> Conv9 [label=DWConv8]
+	Conv9 -> DWConv9 [label=Conv9]
+	DWConv9 -> Conv10 [label=DWConv9]
+	Conv10 -> DWConv10 [label=Conv10]
+	DWConv10 -> Conv11 [label=DWConv10]
+	Conv11 -> DWConv11 [label=Conv11]
+	DWConv11 -> Conv12 [label=DWConv11]
+	Conv12 -> DWConv12 [label=Conv12]
+	DWConv12 -> Conv13 [label=DWConv12]
+	Conv13 -> DWConv13 [label=Conv13]
+	DWConv13 -> Conv14 [label=DWConv13]
+	Conv14 -> GlobalPool1 [label=Conv14]
+	GlobalPool1 -> Linear1 [label=GlobalPool1]
+	subgraph "cluster_Block(Conv1)" {
+		label=1 labeljust=l
+		Conv1
+		DWConv1
+		Conv2
+		DWConv2
+		Conv3
+		DWConv3
+		Conv4
+		DWConv4
+		Conv5
+		DWConv5
+		Conv6
+		DWConv6
+		Conv7
+		DWConv7
+		Conv8
+		DWConv8
+		Conv9
+		DWConv9
+		Conv10
+		DWConv10
+		Conv11
+		DWConv11
+		Conv12
+		DWConv12
+		Conv13
+		DWConv13
+		Conv14
+		GlobalPool1
+		Linear1
+	}
+}

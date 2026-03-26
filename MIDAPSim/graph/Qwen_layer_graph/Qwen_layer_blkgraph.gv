@@ -1,0 +1,872 @@
+digraph Qwen_layer_blkgraph {
+	input -> RMSNorm_D_pre_attn [label=input style=dashed]
+	input -> D_residual_conn1 [label=input style=dashed]
+	subgraph "cluster_Block(input)" {
+		label=0 labeljust=l
+		input
+	}
+	"RoPE_(1024)_w1" -> D_Q14_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q7_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q9_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q5_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q12_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_K8_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q3_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q15_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q1_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q10_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_K4_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q13_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q6_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q8_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q4_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_K12_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_K0_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q2_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q11_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	"RoPE_(1024)_w1" -> D_Q0_RoPE [label="RoPE_(1024)_w1" style=dashed]
+	subgraph "cluster_Block(RoPE_(1024)_w1)" {
+		label=1 labeljust=l
+		"RoPE_(1024)_w1"
+	}
+	subgraph "cluster_Block(D_H0_out_w)" {
+		label=2 labeljust=l
+		D_H0_out_w
+	}
+	subgraph "cluster_Block(D_H1_out_w)" {
+		label=3 labeljust=l
+		D_H1_out_w
+	}
+	subgraph "cluster_Block(D_H2_out_w)" {
+		label=4 labeljust=l
+		D_H2_out_w
+	}
+	subgraph "cluster_Block(D_H3_out_w)" {
+		label=5 labeljust=l
+		D_H3_out_w
+	}
+	subgraph "cluster_Block(D_H4_out_w)" {
+		label=6 labeljust=l
+		D_H4_out_w
+	}
+	subgraph "cluster_Block(D_H5_out_w)" {
+		label=7 labeljust=l
+		D_H5_out_w
+	}
+	subgraph "cluster_Block(D_H6_out_w)" {
+		label=8 labeljust=l
+		D_H6_out_w
+	}
+	subgraph "cluster_Block(D_H7_out_w)" {
+		label=9 labeljust=l
+		D_H7_out_w
+	}
+	subgraph "cluster_Block(D_H8_out_w)" {
+		label=10 labeljust=l
+		D_H8_out_w
+	}
+	subgraph "cluster_Block(D_H9_out_w)" {
+		label=11 labeljust=l
+		D_H9_out_w
+	}
+	subgraph "cluster_Block(D_H10_out_w)" {
+		label=12 labeljust=l
+		D_H10_out_w
+	}
+	subgraph "cluster_Block(D_H11_out_w)" {
+		label=13 labeljust=l
+		D_H11_out_w
+	}
+	subgraph "cluster_Block(D_H12_out_w)" {
+		label=14 labeljust=l
+		D_H12_out_w
+	}
+	subgraph "cluster_Block(D_H13_out_w)" {
+		label=15 labeljust=l
+		D_H13_out_w
+	}
+	subgraph "cluster_Block(D_H14_out_w)" {
+		label=16 labeljust=l
+		D_H14_out_w
+	}
+	subgraph "cluster_Block(D_H15_out_w)" {
+		label=17 labeljust=l
+		D_H15_out_w
+	}
+	subgraph "cluster_Block(D_V_w0)" {
+		label=18 labeljust=l
+		D_V_w0
+	}
+	subgraph "cluster_Block(D_V_w1)" {
+		label=19 labeljust=l
+		D_V_w1
+	}
+	subgraph "cluster_Block(D_V_w2)" {
+		label=20 labeljust=l
+		D_V_w2
+	}
+	subgraph "cluster_Block(D_V_w3)" {
+		label=21 labeljust=l
+		D_V_w3
+	}
+	subgraph "cluster_Block(D_V_w4)" {
+		label=22 labeljust=l
+		D_V_w4
+	}
+	subgraph "cluster_Block(D_V_w5)" {
+		label=23 labeljust=l
+		D_V_w5
+	}
+	subgraph "cluster_Block(D_V_w6)" {
+		label=24 labeljust=l
+		D_V_w6
+	}
+	subgraph "cluster_Block(D_V_w7)" {
+		label=25 labeljust=l
+		D_V_w7
+	}
+	subgraph "cluster_Block(D_V_w8)" {
+		label=26 labeljust=l
+		D_V_w8
+	}
+	subgraph "cluster_Block(D_V_w9)" {
+		label=27 labeljust=l
+		D_V_w9
+	}
+	subgraph "cluster_Block(D_V_w10)" {
+		label=28 labeljust=l
+		D_V_w10
+	}
+	subgraph "cluster_Block(D_V_w11)" {
+		label=29 labeljust=l
+		D_V_w11
+	}
+	subgraph "cluster_Block(D_V_w12)" {
+		label=30 labeljust=l
+		D_V_w12
+	}
+	subgraph "cluster_Block(D_V_w13)" {
+		label=31 labeljust=l
+		D_V_w13
+	}
+	subgraph "cluster_Block(D_V_w14)" {
+		label=32 labeljust=l
+		D_V_w14
+	}
+	subgraph "cluster_Block(D_V_w15)" {
+		label=33 labeljust=l
+		D_V_w15
+	}
+	D_V0_Cached -> D_S_V0 [label=D_V0_Cached style=dashed]
+	D_V0_Cached -> D_S_V1 [label=D_V0_Cached style=dashed]
+	D_V0_Cached -> D_S_V3 [label=D_V0_Cached style=dashed]
+	D_V0_Cached -> D_S_V2 [label=D_V0_Cached style=dashed]
+	subgraph "cluster_Block(D_V0_Cached)" {
+		label=34 labeljust=l
+		D_V0_Cached
+	}
+	D_V1_Cached -> D_S_V7 [label=D_V1_Cached style=dashed]
+	D_V1_Cached -> D_S_V5 [label=D_V1_Cached style=dashed]
+	D_V1_Cached -> D_S_V6 [label=D_V1_Cached style=dashed]
+	D_V1_Cached -> D_S_V4 [label=D_V1_Cached style=dashed]
+	subgraph "cluster_Block(D_V1_Cached)" {
+		label=35 labeljust=l
+		D_V1_Cached
+	}
+	D_V2_Cached -> D_S_V10 [label=D_V2_Cached style=dashed]
+	D_V2_Cached -> D_S_V9 [label=D_V2_Cached style=dashed]
+	D_V2_Cached -> D_S_V8 [label=D_V2_Cached style=dashed]
+	D_V2_Cached -> D_S_V11 [label=D_V2_Cached style=dashed]
+	subgraph "cluster_Block(D_V2_Cached)" {
+		label=36 labeljust=l
+		D_V2_Cached
+	}
+	D_V3_Cached -> D_S_V12 [label=D_V3_Cached style=dashed]
+	D_V3_Cached -> D_S_V13 [label=D_V3_Cached style=dashed]
+	D_V3_Cached -> D_S_V14 [label=D_V3_Cached style=dashed]
+	D_V3_Cached -> D_S_V15 [label=D_V3_Cached style=dashed]
+	subgraph "cluster_Block(D_V3_Cached)" {
+		label=37 labeljust=l
+		D_V3_Cached
+	}
+	RMSNorm_D_pre_attn -> D_H8_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H0_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H13_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H9_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H1_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H14_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H10_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H2_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H15_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H11_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H3_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H4_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H5_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H6_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H7_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H16_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H17_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H18_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H19_in [label=RMSNorm_D_pre_attn style=dashed]
+	RMSNorm_D_pre_attn -> D_H12_in [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(RMSNorm_D_pre_attn)" {
+		label=38 labeljust=l
+		RMSNorm_D_pre_attn
+	}
+	D_H0_in -> D_V0 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H0_in -> D_K0 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H0_in -> D_Q0 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H0_in)" {
+		label=39 labeljust=l
+		D_H0_in
+	}
+	D_H1_in -> D_Q1 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H1_in)" {
+		label=40 labeljust=l
+		D_H1_in
+	}
+	D_H2_in -> D_Q2 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H2_in)" {
+		label=41 labeljust=l
+		D_H2_in
+	}
+	D_H3_in -> D_Q3 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H3_in)" {
+		label=42 labeljust=l
+		D_H3_in
+	}
+	D_H4_in -> D_Q4 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H4_in -> D_V4 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H4_in -> D_K4 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H4_in)" {
+		label=43 labeljust=l
+		D_H4_in
+	}
+	D_H5_in -> D_Q5 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H5_in)" {
+		label=44 labeljust=l
+		D_H5_in
+	}
+	D_H6_in -> D_Q6 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H6_in)" {
+		label=45 labeljust=l
+		D_H6_in
+	}
+	D_H7_in -> D_Q7 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H7_in)" {
+		label=46 labeljust=l
+		D_H7_in
+	}
+	D_H8_in -> D_V8 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H8_in -> D_Q8 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H8_in -> D_K8 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H8_in)" {
+		label=47 labeljust=l
+		D_H8_in
+	}
+	D_H9_in -> D_Q9 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H9_in)" {
+		label=48 labeljust=l
+		D_H9_in
+	}
+	D_H10_in -> D_Q10 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H10_in)" {
+		label=49 labeljust=l
+		D_H10_in
+	}
+	D_H11_in -> D_Q11 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H11_in)" {
+		label=50 labeljust=l
+		D_H11_in
+	}
+	D_H12_in -> D_V12 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H12_in -> D_Q12 [label=RMSNorm_D_pre_attn style=dashed]
+	D_H12_in -> D_K12 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H12_in)" {
+		label=51 labeljust=l
+		D_H12_in
+	}
+	D_H13_in -> D_Q13 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H13_in)" {
+		label=52 labeljust=l
+		D_H13_in
+	}
+	D_H14_in -> D_Q14 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H14_in)" {
+		label=53 labeljust=l
+		D_H14_in
+	}
+	D_H15_in -> D_Q15 [label=RMSNorm_D_pre_attn style=dashed]
+	subgraph "cluster_Block(D_H15_in)" {
+		label=54 labeljust=l
+		D_H15_in
+	}
+	subgraph "cluster_Block(D_H16_in)" {
+		label=55 labeljust=l
+		D_H16_in
+	}
+	subgraph "cluster_Block(D_H17_in)" {
+		label=56 labeljust=l
+		D_H17_in
+	}
+	subgraph "cluster_Block(D_H18_in)" {
+		label=57 labeljust=l
+		D_H18_in
+	}
+	subgraph "cluster_Block(D_H19_in)" {
+		label=58 labeljust=l
+		D_H19_in
+	}
+	D_QK_T0 -> Softmax_D_H0 [label=D_QK_T0 style=dashed]
+	subgraph "cluster_Block(D_QK_T0)" {
+		label=61 labeljust=l
+		D_QK_T0
+	}
+	D_Q0_RoPE -> D_QK_T0 [label=D_Q0_RoPE]
+	subgraph "cluster_Block(D_Q0_RoPE)" {
+		label=60 labeljust=l
+		D_Q0_RoPE
+	}
+	D_Q0 -> D_Q0_RoPE [label=D_Q0]
+	subgraph "cluster_Block(D_Q0)" {
+		label=59 labeljust=l
+		D_Q0
+	}
+	D_K0_RoPE -> D_K0_Cache [label=D_K0_Cache style=dashed]
+	subgraph "cluster_Block(D_K0_RoPE)" {
+		label=63 labeljust=l
+		D_K0_RoPE
+	}
+	D_K0 -> D_K0_RoPE [label=D_K0]
+	subgraph "cluster_Block(D_K0)" {
+		label=62 labeljust=l
+		D_K0
+	}
+	subgraph "cluster_Block(D_V0)" {
+		label=64 labeljust=l
+		D_V0
+	}
+	D_QK_T1 -> Softmax_D_H1 [label=D_QK_T1 style=dashed]
+	subgraph "cluster_Block(D_QK_T1)" {
+		label=67 labeljust=l
+		D_QK_T1
+	}
+	D_Q1_RoPE -> D_QK_T1 [label=D_Q1_RoPE]
+	subgraph "cluster_Block(D_Q1_RoPE)" {
+		label=66 labeljust=l
+		D_Q1_RoPE
+	}
+	D_Q1 -> D_Q1_RoPE [label=D_Q1]
+	subgraph "cluster_Block(D_Q1)" {
+		label=65 labeljust=l
+		D_Q1
+	}
+	D_QK_T2 -> Softmax_D_H2 [label=D_QK_T2 style=dashed]
+	subgraph "cluster_Block(D_QK_T2)" {
+		label=70 labeljust=l
+		D_QK_T2
+	}
+	D_Q2_RoPE -> D_QK_T2 [label=D_Q2_RoPE]
+	subgraph "cluster_Block(D_Q2_RoPE)" {
+		label=69 labeljust=l
+		D_Q2_RoPE
+	}
+	D_Q2 -> D_Q2_RoPE [label=D_Q2]
+	subgraph "cluster_Block(D_Q2)" {
+		label=68 labeljust=l
+		D_Q2
+	}
+	D_QK_T3 -> Softmax_D_H3 [label=D_QK_T3 style=dashed]
+	subgraph "cluster_Block(D_QK_T3)" {
+		label=73 labeljust=l
+		D_QK_T3
+	}
+	D_Q3_RoPE -> D_QK_T3 [label=D_Q3_RoPE]
+	subgraph "cluster_Block(D_Q3_RoPE)" {
+		label=72 labeljust=l
+		D_Q3_RoPE
+	}
+	D_Q3 -> D_Q3_RoPE [label=D_Q3]
+	subgraph "cluster_Block(D_Q3)" {
+		label=71 labeljust=l
+		D_Q3
+	}
+	D_QK_T4 -> Softmax_D_H4 [label=D_QK_T4 style=dashed]
+	subgraph "cluster_Block(D_QK_T4)" {
+		label=76 labeljust=l
+		D_QK_T4
+	}
+	D_Q4_RoPE -> D_QK_T4 [label=D_Q4_RoPE]
+	subgraph "cluster_Block(D_Q4_RoPE)" {
+		label=75 labeljust=l
+		D_Q4_RoPE
+	}
+	D_Q4 -> D_Q4_RoPE [label=D_Q4]
+	subgraph "cluster_Block(D_Q4)" {
+		label=74 labeljust=l
+		D_Q4
+	}
+	D_K4_RoPE -> D_K4_Cache [label=D_K4_Cache style=dashed]
+	subgraph "cluster_Block(D_K4_RoPE)" {
+		label=78 labeljust=l
+		D_K4_RoPE
+	}
+	D_K4 -> D_K4_RoPE [label=D_K4]
+	subgraph "cluster_Block(D_K4)" {
+		label=77 labeljust=l
+		D_K4
+	}
+	subgraph "cluster_Block(D_V4)" {
+		label=79 labeljust=l
+		D_V4
+	}
+	D_QK_T5 -> Softmax_D_H5 [label=D_QK_T5 style=dashed]
+	subgraph "cluster_Block(D_QK_T5)" {
+		label=82 labeljust=l
+		D_QK_T5
+	}
+	D_Q5_RoPE -> D_QK_T5 [label=D_Q5_RoPE]
+	subgraph "cluster_Block(D_Q5_RoPE)" {
+		label=81 labeljust=l
+		D_Q5_RoPE
+	}
+	D_Q5 -> D_Q5_RoPE [label=D_Q5]
+	subgraph "cluster_Block(D_Q5)" {
+		label=80 labeljust=l
+		D_Q5
+	}
+	D_QK_T6 -> Softmax_D_H6 [label=D_QK_T6 style=dashed]
+	subgraph "cluster_Block(D_QK_T6)" {
+		label=85 labeljust=l
+		D_QK_T6
+	}
+	D_Q6_RoPE -> D_QK_T6 [label=D_Q6_RoPE]
+	subgraph "cluster_Block(D_Q6_RoPE)" {
+		label=84 labeljust=l
+		D_Q6_RoPE
+	}
+	D_Q6 -> D_Q6_RoPE [label=D_Q6]
+	subgraph "cluster_Block(D_Q6)" {
+		label=83 labeljust=l
+		D_Q6
+	}
+	D_QK_T7 -> Softmax_D_H7 [label=D_QK_T7 style=dashed]
+	subgraph "cluster_Block(D_QK_T7)" {
+		label=88 labeljust=l
+		D_QK_T7
+	}
+	D_Q7_RoPE -> D_QK_T7 [label=D_Q7_RoPE]
+	subgraph "cluster_Block(D_Q7_RoPE)" {
+		label=87 labeljust=l
+		D_Q7_RoPE
+	}
+	D_Q7 -> D_Q7_RoPE [label=D_Q7]
+	subgraph "cluster_Block(D_Q7)" {
+		label=86 labeljust=l
+		D_Q7
+	}
+	D_K0_Cache -> D_K0_Cached [label=D_K0_Cache]
+	D_K0_Cached -> D_QK_T1 [label=D_K0_Cache style=dashed]
+	D_K0_Cached -> D_QK_T2 [label=D_K0_Cache style=dashed]
+	D_K0_Cached -> D_QK_T3 [label=D_K0_Cache style=dashed]
+	D_K0_Cached -> D_QK_T0 [label=D_K0_Cache style=dashed]
+	subgraph "cluster_Block(D_K0_Cache)" {
+		label=89 labeljust=l
+		D_K0_Cache
+		D_K0_Cached
+	}
+	Softmax_D_H0 -> D_S_V0 [label=Softmax_D_H0 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H0)" {
+		label=90 labeljust=l
+		Softmax_D_H0
+	}
+	D_S_V0 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V0)" {
+		label=91 labeljust=l
+		D_S_V0
+	}
+	Softmax_D_H1 -> D_S_V1 [label=Softmax_D_H1 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H1)" {
+		label=92 labeljust=l
+		Softmax_D_H1
+	}
+	D_S_V1 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V1)" {
+		label=93 labeljust=l
+		D_S_V1
+	}
+	Softmax_D_H2 -> D_S_V2 [label=Softmax_D_H2 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H2)" {
+		label=94 labeljust=l
+		Softmax_D_H2
+	}
+	D_S_V2 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V2)" {
+		label=95 labeljust=l
+		D_S_V2
+	}
+	Softmax_D_H3 -> D_S_V3 [label=Softmax_D_H3 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H3)" {
+		label=96 labeljust=l
+		Softmax_D_H3
+	}
+	D_S_V3 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V3)" {
+		label=97 labeljust=l
+		D_S_V3
+	}
+	D_QK_T8 -> Softmax_D_H8 [label=D_QK_T8 style=dashed]
+	subgraph "cluster_Block(D_QK_T8)" {
+		label=100 labeljust=l
+		D_QK_T8
+	}
+	D_Q8_RoPE -> D_QK_T8 [label=D_Q8_RoPE]
+	subgraph "cluster_Block(D_Q8_RoPE)" {
+		label=99 labeljust=l
+		D_Q8_RoPE
+	}
+	D_Q8 -> D_Q8_RoPE [label=D_Q8]
+	subgraph "cluster_Block(D_Q8)" {
+		label=98 labeljust=l
+		D_Q8
+	}
+	D_K8 -> D_K8_RoPE [label=D_K8 style=dashed]
+	subgraph "cluster_Block(D_K8)" {
+		label=101 labeljust=l
+		D_K8
+	}
+	subgraph "cluster_Block(D_V8)" {
+		label=102 labeljust=l
+		D_V8
+	}
+	D_QK_T9 -> Softmax_D_H9 [label=D_QK_T9 style=dashed]
+	subgraph "cluster_Block(D_QK_T9)" {
+		label=105 labeljust=l
+		D_QK_T9
+	}
+	D_Q9_RoPE -> D_QK_T9 [label=D_Q9_RoPE]
+	subgraph "cluster_Block(D_Q9_RoPE)" {
+		label=104 labeljust=l
+		D_Q9_RoPE
+	}
+	D_Q9 -> D_Q9_RoPE [label=D_Q9]
+	subgraph "cluster_Block(D_Q9)" {
+		label=103 labeljust=l
+		D_Q9
+	}
+	D_Q10 -> D_Q10_RoPE [label=D_Q10 style=dashed]
+	subgraph "cluster_Block(D_Q10)" {
+		label=106 labeljust=l
+		D_Q10
+	}
+	D_Q11 -> D_Q11_RoPE [label=D_Q11 style=dashed]
+	subgraph "cluster_Block(D_Q11)" {
+		label=107 labeljust=l
+		D_Q11
+	}
+	D_K4_Cache -> D_K4_Cached [label=D_K4_Cache]
+	D_K4_Cached -> D_QK_T4 [label=D_K4_Cache style=dashed]
+	D_K4_Cached -> D_QK_T6 [label=D_K4_Cache style=dashed]
+	D_K4_Cached -> D_QK_T7 [label=D_K4_Cache style=dashed]
+	D_K4_Cached -> D_QK_T5 [label=D_K4_Cache style=dashed]
+	subgraph "cluster_Block(D_K4_Cache)" {
+		label=108 labeljust=l
+		D_K4_Cache
+		D_K4_Cached
+	}
+	Softmax_D_H4 -> D_S_V4 [label=Softmax_D_H4 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H4)" {
+		label=109 labeljust=l
+		Softmax_D_H4
+	}
+	D_S_V4 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V4)" {
+		label=110 labeljust=l
+		D_S_V4
+	}
+	Softmax_D_H5 -> D_S_V5 [label=Softmax_D_H5 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H5)" {
+		label=111 labeljust=l
+		Softmax_D_H5
+	}
+	D_S_V5 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V5)" {
+		label=112 labeljust=l
+		D_S_V5
+	}
+	Softmax_D_H6 -> D_S_V6 [label=Softmax_D_H6 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H6)" {
+		label=113 labeljust=l
+		Softmax_D_H6
+	}
+	D_S_V6 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V6)" {
+		label=114 labeljust=l
+		D_S_V6
+	}
+	Softmax_D_H7 -> D_S_V7 [label=Softmax_D_H7 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H7)" {
+		label=115 labeljust=l
+		Softmax_D_H7
+	}
+	D_S_V7 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V7)" {
+		label=116 labeljust=l
+		D_S_V7
+	}
+	D_Q12 -> D_Q12_RoPE [label=D_Q12 style=dashed]
+	subgraph "cluster_Block(D_Q12)" {
+		label=117 labeljust=l
+		D_Q12
+	}
+	D_K12 -> D_K12_RoPE [label=D_K12 style=dashed]
+	subgraph "cluster_Block(D_K12)" {
+		label=118 labeljust=l
+		D_K12
+	}
+	subgraph "cluster_Block(D_V12)" {
+		label=119 labeljust=l
+		D_V12
+	}
+	D_Q13 -> D_Q13_RoPE [label=D_Q13 style=dashed]
+	subgraph "cluster_Block(D_Q13)" {
+		label=120 labeljust=l
+		D_Q13
+	}
+	D_Q14 -> D_Q14_RoPE [label=D_Q14 style=dashed]
+	subgraph "cluster_Block(D_Q14)" {
+		label=121 labeljust=l
+		D_Q14
+	}
+	D_Q15 -> D_Q15_RoPE [label=D_Q15 style=dashed]
+	subgraph "cluster_Block(D_Q15)" {
+		label=122 labeljust=l
+		D_Q15
+	}
+	D_Q10_RoPE -> D_QK_T10 [label=D_Q10_RoPE style=dashed]
+	subgraph "cluster_Block(D_Q10_RoPE)" {
+		label=123 labeljust=l
+		D_Q10_RoPE
+	}
+	D_Q11_RoPE -> D_QK_T11 [label=D_Q11_RoPE style=dashed]
+	subgraph "cluster_Block(D_Q11_RoPE)" {
+		label=124 labeljust=l
+		D_Q11_RoPE
+	}
+	D_K8_RoPE -> D_K8_Cache [label=D_K8_Cache style=dashed]
+	subgraph "cluster_Block(D_K8_RoPE)" {
+		label=125 labeljust=l
+		D_K8_RoPE
+	}
+	D_K8_Cache -> D_K8_Cached [label=D_K8_Cache]
+	D_K8_Cached -> D_QK_T11 [label=D_K8_Cache style=dashed]
+	D_K8_Cached -> D_QK_T9 [label=D_K8_Cache style=dashed]
+	D_K8_Cached -> D_QK_T10 [label=D_K8_Cache style=dashed]
+	D_K8_Cached -> D_QK_T8 [label=D_K8_Cache style=dashed]
+	subgraph "cluster_Block(D_K8_Cache)" {
+		label=126 labeljust=l
+		D_K8_Cache
+		D_K8_Cached
+	}
+	Softmax_D_H8 -> D_S_V8 [label=Softmax_D_H8 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H8)" {
+		label=127 labeljust=l
+		Softmax_D_H8
+	}
+	D_S_V8 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V8)" {
+		label=128 labeljust=l
+		D_S_V8
+	}
+	Softmax_D_H9 -> D_S_V9 [label=Softmax_D_H9 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H9)" {
+		label=129 labeljust=l
+		Softmax_D_H9
+	}
+	D_S_V9 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V9)" {
+		label=130 labeljust=l
+		D_S_V9
+	}
+	D_QK_T10 -> Softmax_D_H10 [label=D_QK_T10 style=dashed]
+	subgraph "cluster_Block(D_QK_T10)" {
+		label=131 labeljust=l
+		D_QK_T10
+	}
+	Softmax_D_H10 -> D_S_V10 [label=Softmax_D_H10 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H10)" {
+		label=132 labeljust=l
+		Softmax_D_H10
+	}
+	D_S_V10 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V10)" {
+		label=133 labeljust=l
+		D_S_V10
+	}
+	D_QK_T11 -> Softmax_D_H11 [label=D_QK_T11 style=dashed]
+	subgraph "cluster_Block(D_QK_T11)" {
+		label=134 labeljust=l
+		D_QK_T11
+	}
+	Softmax_D_H11 -> D_S_V11 [label=Softmax_D_H11 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H11)" {
+		label=135 labeljust=l
+		Softmax_D_H11
+	}
+	D_S_V11 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V11)" {
+		label=136 labeljust=l
+		D_S_V11
+	}
+	D_Q12_RoPE -> D_QK_T12 [label=D_Q12_RoPE style=dashed]
+	subgraph "cluster_Block(D_Q12_RoPE)" {
+		label=137 labeljust=l
+		D_Q12_RoPE
+	}
+	D_Q13_RoPE -> D_QK_T13 [label=D_Q13_RoPE style=dashed]
+	subgraph "cluster_Block(D_Q13_RoPE)" {
+		label=138 labeljust=l
+		D_Q13_RoPE
+	}
+	D_Q14_RoPE -> D_QK_T14 [label=D_Q14_RoPE style=dashed]
+	subgraph "cluster_Block(D_Q14_RoPE)" {
+		label=139 labeljust=l
+		D_Q14_RoPE
+	}
+	D_Q15_RoPE -> D_QK_T15 [label=D_Q15_RoPE style=dashed]
+	subgraph "cluster_Block(D_Q15_RoPE)" {
+		label=140 labeljust=l
+		D_Q15_RoPE
+	}
+	D_K12_RoPE -> D_K12_Cache [label=D_K12_Cache style=dashed]
+	subgraph "cluster_Block(D_K12_RoPE)" {
+		label=141 labeljust=l
+		D_K12_RoPE
+	}
+	D_K12_Cache -> D_K12_Cached [label=D_K12_Cache]
+	D_K12_Cached -> D_QK_T12 [label=D_K12_Cache style=dashed]
+	D_K12_Cached -> D_QK_T15 [label=D_K12_Cache style=dashed]
+	D_K12_Cached -> D_QK_T14 [label=D_K12_Cache style=dashed]
+	D_K12_Cached -> D_QK_T13 [label=D_K12_Cache style=dashed]
+	subgraph "cluster_Block(D_K12_Cache)" {
+		label=142 labeljust=l
+		D_K12_Cache
+		D_K12_Cached
+	}
+	D_QK_T12 -> Softmax_D_H12 [label=D_QK_T12 style=dashed]
+	subgraph "cluster_Block(D_QK_T12)" {
+		label=143 labeljust=l
+		D_QK_T12
+	}
+	Softmax_D_H12 -> D_S_V12 [label=Softmax_D_H12 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H12)" {
+		label=144 labeljust=l
+		Softmax_D_H12
+	}
+	D_S_V12 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V12)" {
+		label=145 labeljust=l
+		D_S_V12
+	}
+	D_QK_T13 -> Softmax_D_H13 [label=D_QK_T13 style=dashed]
+	subgraph "cluster_Block(D_QK_T13)" {
+		label=146 labeljust=l
+		D_QK_T13
+	}
+	Softmax_D_H13 -> D_S_V13 [label=Softmax_D_H13 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H13)" {
+		label=147 labeljust=l
+		Softmax_D_H13
+	}
+	D_S_V13 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V13)" {
+		label=148 labeljust=l
+		D_S_V13
+	}
+	D_QK_T14 -> Softmax_D_H14 [label=D_QK_T14 style=dashed]
+	subgraph "cluster_Block(D_QK_T14)" {
+		label=149 labeljust=l
+		D_QK_T14
+	}
+	Softmax_D_H14 -> D_S_V14 [label=Softmax_D_H14 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H14)" {
+		label=150 labeljust=l
+		Softmax_D_H14
+	}
+	D_S_V14 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V14)" {
+		label=151 labeljust=l
+		D_S_V14
+	}
+	D_QK_T15 -> Softmax_D_H15 [label=D_QK_T15 style=dashed]
+	subgraph "cluster_Block(D_QK_T15)" {
+		label=152 labeljust=l
+		D_QK_T15
+	}
+	Softmax_D_H15 -> D_S_V15 [label=Softmax_D_H15 style=dashed]
+	subgraph "cluster_Block(Softmax_D_H15)" {
+		label=153 labeljust=l
+		Softmax_D_H15
+	}
+	D_S_V15 -> Concat1 [label=Concat1 style=dashed]
+	subgraph "cluster_Block(D_S_V15)" {
+		label=154 labeljust=l
+		D_S_V15
+	}
+	Concat1 -> D_MHA_out [label=Concat1 style=dashed]
+	subgraph "cluster_Block(Concat1)" {
+		label=155 labeljust=l
+		Concat1
+	}
+	D_MHA_out -> RMSNorm_D_post_attn [label=D_MHA_out style=dashed]
+	subgraph "cluster_Block(D_MHA_out)" {
+		label=156 labeljust=l
+		D_MHA_out
+	}
+	RMSNorm_D_post_attn -> D_residual_conn1 [label=RMSNorm_D_post_attn style=dashed]
+	subgraph "cluster_Block(RMSNorm_D_post_attn)" {
+		label=157 labeljust=l
+		RMSNorm_D_post_attn
+	}
+	D_residual_conn1 -> RMSNorm_D_pre_mlp [label=D_residual_conn1 style=dashed]
+	D_residual_conn1 -> D_residual_conn2 [label=D_residual_conn1 style=dashed]
+	subgraph "cluster_Block(D_residual_conn1)" {
+		label=158 labeljust=l
+		D_residual_conn1
+	}
+	RMSNorm_D_pre_mlp -> D_gate_proj [label=RMSNorm_D_pre_mlp style=dashed]
+	RMSNorm_D_pre_mlp -> D_up_proj [label=RMSNorm_D_pre_mlp style=dashed]
+	subgraph "cluster_Block(RMSNorm_D_pre_mlp)" {
+		label=159 labeljust=l
+		RMSNorm_D_pre_mlp
+	}
+	D_gate_proj -> Mul1 [label=D_gate_proj style=dashed]
+	subgraph "cluster_Block(D_gate_proj)" {
+		label=160 labeljust=l
+		D_gate_proj
+	}
+	D_up_proj -> Mul1 [label=D_up_proj style=dashed]
+	subgraph "cluster_Block(D_up_proj)" {
+		label=161 labeljust=l
+		D_up_proj
+	}
+	Mul1 -> D_down_proj [label=Mul1 style=dashed]
+	subgraph "cluster_Block(Mul1)" {
+		label=162 labeljust=l
+		Mul1
+	}
+	D_down_proj -> RMSNorm_D_post_mlp [label=D_down_proj style=dashed]
+	subgraph "cluster_Block(D_down_proj)" {
+		label=163 labeljust=l
+		D_down_proj
+	}
+	RMSNorm_D_post_mlp -> D_residual_conn2 [label=RMSNorm_D_post_mlp style=dashed]
+	subgraph "cluster_Block(RMSNorm_D_post_mlp)" {
+		label=164 labeljust=l
+		RMSNorm_D_post_mlp
+	}
+	subgraph "cluster_Block(D_residual_conn2)" {
+		label=165 labeljust=l
+		D_residual_conn2
+	}
+}
